@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="https://i.ibb.co/pBBsNJfw/logo.png" alt="logo" width="120" height=auto />
+  <img src="https://i.ibb.co/pBBsNJfw/logo.png" alt="logo" width="120" height=auto />
 
   # FYRP AI Model
   ### Smart Energy Meter AI Component
@@ -233,8 +233,8 @@ print(f"Theft Probability: {theft_prob[0][0]:.4f}")
 ║    • Power: 350 W                                        ║
 ║                                                          ║
 ║  Detection Results:                                      ║
-║    ⚡ Theft Detection: 0.0234 (Normal) ✅                ║
-║    ♻️  Waste Detection: 0.1245 (Normal) ✅                ║
+║    ⚡ Theft Detection: 0.0234 (Normal) ✅               ║
+║    ♻️  Waste Detection: 0.1245 (Normal) ✅              ║
 ║    📊 Predicted Power: 352.45 W                          ║
 ╚══════════════════════════════════════════════════════════╝
 ```
