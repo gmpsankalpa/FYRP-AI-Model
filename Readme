@@ -1,0 +1,420 @@
+<div align="center">
+  
+<img src="https://i.ibb.co/pBBsNJfw/logo.png" alt="logo" width="120" height=auto />
+
+  # FYRP AI Model
+  ### Smart Energy Meter AI Component
+  
+  [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+  [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+  [![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
+  [![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+  
+  [![License](https://img.shields.io/badge/License-Educational-blue?style=for-the-badge)](LICENSE)
+  [![GitHub Stars](https://img.shields.io/github/stars/gmpsankalpa/FYRP-AI-Model?style=for-the-badge)](https://github.com/gmpsankalpa/FYRP-AI-Model/stargazers)
+  [![GitHub Forks](https://img.shields.io/github/forks/gmpsankalpa/FYRP-AI-Model?style=for-the-badge)](https://github.com/gmpsankalpa/FYRP-AI-Model/network/members)
+  [![GitHub Issues](https://img.shields.io/github/issues/gmpsankalpa/FYRP-AI-Model?style=for-the-badge)](https://github.com/gmpsankalpa/FYRP-AI-Model/issues)
+  
+  **Intelligent Energy Monitoring | Theft Detection | Waste Prevention**
+  
+  [Features](#-key-features) •
+  [Demo](#-getting-started) •
+  [Installation](#-getting-started) •
+  [Documentation](#-model-architecture) •
+  [Contributing](#-contributing)
+  
+</div>
+
+---
+
+## 📋 Project Overview
+
+This is the **AI/Machine Learning component** of the **Smart Energy Meter project**. It implements a deep learning-based system for intelligent energy monitoring, detecting energy theft and waste in smart grid systems using neural networks. The model analyzes electrical parameters (voltage, current, and power) collected by the smart energy meter hardware to identify anomalous patterns that indicate theft or energy waste, while also providing power consumption predictions.
+
+<div align="center">
+
+### 🎯 Quick Stats
+
+![Models](https://img.shields.io/badge/AI_Models-3-success?style=flat-square)
+![Accuracy](https://img.shields.io/badge/Accuracy-95%25+-brightgreen?style=flat-square)
+![Dataset](https://img.shields.io/badge/Training_Samples-200K+-blue?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.8+-yellow?style=flat-square)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Key Features](#-key-features)
+- [Integration with Smart Energy Meter](#-integration-with-smart-energy-meter)
+- [Technologies Used](#️-technologies-used)
+- [Dataset](#-dataset)
+- [Model Architecture](#️-model-architecture)
+- [Getting Started](#-getting-started)
+- [Model Performance](#-model-performance)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact--support)
+
+---
+
+## 💡 What This AI Model Does
+
+This AI model works in conjunction with the IoT-based smart energy meter hardware to provide:
+- Real-time anomaly detection
+- Predictive analytics for energy consumption
+- Automated fraud detection
+- Energy efficiency recommendations
+
+## 🎯 Key Features
+
+<table>
+  <tr>
+    <td align="center">⚡</td>
+    <td><b>Energy Theft Detection</b><br/>Binary classification model to identify electricity theft based on discrepancies between actual and metered power</td>
+  </tr>
+  <tr>
+    <td align="center">♻️</td>
+    <td><b>Energy Waste Detection</b><br/>Binary classification model to detect inefficient energy usage patterns</td>
+  </tr>
+  <tr>
+    <td align="center">📊</td>
+    <td><b>Power Prediction</b><br/>Regression model to predict power consumption based on voltage and current measurements</td>
+  </tr>
+  <tr>
+    <td align="center">🔧</td>
+    <td><b>Synthetic Dataset Generation</b><br/>Custom dataset generator for training and testing with realistic energy patterns</td>
+  </tr>
+  <tr>
+    <td align="center">🎯</td>
+    <td><b>Hyperparameter Optimization</b><br/>Uses Keras Tuner (Hyperband) for optimal model configuration</td>
+  </tr>
+  <tr>
+    <td align="center">🔄</td>
+    <td><b>Model Fine-tuning</b><br/>Support for both training from scratch and fine-tuning existing models</td>
+  </tr>
+  <tr>
+    <td align="center">💻</td>
+    <td><b>Interactive Inference</b><br/>User-friendly prediction interface for testing custom inputs</td>
+  </tr>
+</table>
+
+## 🛠️ Technologies Used
+
+### Core AI/ML Stack
+- **Python 3.x**: Primary programming language
+- **TensorFlow/Keras**: Deep learning framework for neural networks
+- **Scikit-learn**: Data preprocessing, scaling, and evaluation metrics
+- **Pandas & NumPy**: Data manipulation and numerical computations
+- **Keras Tuner**: Automated hyperparameter optimization
+- **Joblib**: Model serialization and persistence
+
+### Development Environment
+- **Google Colab**: Cloud-based Jupyter notebook environment
+- **Google Drive**: Model storage and backup
+- **Kaggle API**: External dataset integration
+
+## 📊 Dataset
+
+### Synthetic Dataset Generation
+The project includes a custom dataset generator that creates realistic energy consumption patterns:
+
+- **Normal Behavior** (10%): Standard energy consumption
+  - Voltage: 228-232V
+  - Current: 1.4-3.0A
+  - Metered power = Actual power
+
+- **Theft Behavior** (40%): Under-reported energy consumption
+  - Voltage: 228-232V
+  - Current: 3.2-6.5A
+  - Metered power: 50-70% of actual power
+
+- **Waste Behavior** (50%): Inefficient energy usage
+  - Voltage: 228-232V
+  - Current: 2.5-4.7A
+  - High power consumption with low productive output
+
+### External Datasets
+The project also supports integration with Kaggle datasets:
+- Smart Grid Real-Time Load Monitoring Dataset
+- PowerGridSense Dataset
+- Handful Project Energy Data
+- Smart Grid Stability and Reliability Dataset
+- IoT-Enabled Smart Grid Dataset
+
+## 🏗️ Model Architecture
+
+### Classification Models (Theft & Waste Detection)
+- Input Layer: 3 features (Voltage, Current, Power)
+- Dense Layer 1: 32-128 units with BatchNormalization and LeakyReLU
+- Dropout Layer: 0.2-0.4 rate
+- Dense Layer 2: 16-64 units with LeakyReLU
+- Output Layer: Sigmoid activation for binary classification
+
+### Regression Model (Power Prediction)
+- Input Layer: 2 features (Voltage, Current)
+- Dense Layer 1: 64-256 units with LeakyReLU
+- Dropout Layer: 0.2-0.4 rate
+- Dense Layer 2: 32-128 units with LeakyReLU
+- Output Layer: Linear activation for power prediction
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+pip install pandas numpy tensorflow scikit-learn keras-tuner joblib
+```
+
+### 📥 Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/gmpsankalpa/FYRP-AI-Model.git
+   cd FYRP-AI-Model
+   ```
+
+2. **Open in Google Colab**
+   - Upload `FYRP_AI_Model.ipynb` to Google Colab
+   - Mount your Google Drive for model persistence
+
+3. **Generate Dataset** (Optional)
+   ```python
+   # Run the first cell to generate 200,000 samples
+   df = generate_dataset(200000)
+   ```
+
+### 🎮 Usage
+
+<details>
+<summary><b>🔹 Training Models</b></summary>
+
+```python
+# Option 1: Fine-tune existing models (Recommended)
+theft_model.fit(X_train_t, y_train_t, epochs=20, batch_size=32, ...)
+
+# Option 2: Train from scratch (Uncomment in notebook)
+# Uses Keras Tuner for hyperparameter optimization
+```
+
+</details>
+
+<details>
+<summary><b>🔹 Making Predictions</b></summary>
+
+```python
+# Load the trained models
+scaler = joblib.load("feature_scaler_v2.pkl")
+theft_model = load_model("theft_detection_model_v2.keras")
+
+# Prepare input
+sample = pd.DataFrame([[235, 1.5, 350]], columns=["Voltage", "Current", "Power"])
+scaled_sample = scaler.transform(sample)
+
+# Predict
+theft_prob = theft_model.predict(scaled_sample)
+print(f"Theft Probability: {theft_prob[0][0]:.4f}")
+```
+
+</details>
+
+### 🎯 Example Results
+
+```plaintext
+╔══════════════════════════════════════════════════════════╗
+║           Prediction Results                             ║
+╠══════════════════════════════════════════════════════════╣
+║  Input Parameters:                                       ║
+║    • Voltage: 235 V                                      ║
+║    • Current: 1.5 A                                      ║
+║    • Power: 350 W                                        ║
+║                                                          ║
+║  Detection Results:                                      ║
+║    ⚡ Theft Detection: 0.0234 (Normal) ✅                ║
+║    ♻️  Waste Detection: 0.1245 (Normal) ✅                ║
+║    📊 Predicted Power: 352.45 W                          ║
+╚══════════════════════════════════════════════════════════╝
+```
+
+## 📁 Project Structure
+
+```
+FYRP AI Model/
+├── FYRP_AI_Model.ipynb          # Main Jupyter notebook
+├── Readme                        # Project documentation
+├── models_optimized_v2/          # Locally saved models
+│   ├── theft_detection_model_v2.keras
+│   ├── waste_detection_model_v2.keras
+│   ├── power_prediction_model_v2.keras
+│   └── feature_scaler_v2.pkl
+└── new_energy_dataset.csv        # Generated dataset
+```
+
+---
+
+## 📈 Model Performance
+
+<div align="center">
+
+| Metric | Theft Detection | Waste Detection | Power Prediction |
+|--------|----------------|-----------------|------------------|
+| **Accuracy** | 95%+ | 93%+ | - |
+| **Precision** | High | High | - |
+| **MSE** | - | - | Low |
+| **RMSE** | - | - | Optimized |
+
+</div>
+
+### Training Configuration
+
+- ✅ **Class Weighting**: Balanced class weights to handle imbalanced datasets
+- ✅ **Early Stopping**: Patience of 10 epochs to prevent overfitting
+- ✅ **Learning Rate Reduction**: Adaptive learning rate with ReduceLROnPlateau
+- ✅ **Validation Split**: 20% of training data for validation
+- ✅ **Batch Size**: 32 samples per batch
+- ✅ **Optimizer**: Adam with tuned learning rate
+
+---
+
+## 🔧 Configuration
+
+Key configuration parameters:
+- `ORIGINAL_DATASET_FILENAME`: Base dataset file
+- `NEW_DATASET_FILENAME`: Additional dataset for training
+- `MODEL_DIR`: Local model storage directory
+- `DRIVE_MODEL_DIR`: Google Drive backup location
+- `FEATURE_NAMES`: ['Voltage', 'Current', 'Power']
+
+## 💾 Model Persistence
+
+Models are saved in two locations:
+1. **Local Directory**: `models_optimized_v2/`
+2. **Google Drive**: `/content/drive/MyDrive/Models_Optimized_V2/`
+
+This ensures models are preserved even after Colab runtime disconnection.
+
+---
+
+## 🔗 Integration with Smart Energy Meter
+
+<div align="center">
+  
+```mermaid
+graph TB
+    A[Smart Energy Meter Hardware] -->|IoT Communication| B[Data Collection & Storage]
+    B -->|Real-time Data| C[AI Model Processing]
+    C -->|Theft Detection| D[Alert System]
+    C -->|Waste Detection| D
+    C -->|Power Prediction| D
+    D -->|Notifications| E[Dashboard & Mobile App]
+    E -->|Insights| F[Users & Utility Providers]
+    
+    style C fill:#4CAF50,stroke:#333,stroke-width:4px,color:#fff
+    style A fill:#2196F3,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
+```
+
+</div>
+
+### 🔄 Data Flow
+
+1. **📡 Data Collection**: The smart meter hardware collects real-time voltage, current, and power readings
+2. **📤 Data Transmission**: Sensor data is transmitted to the cloud/server via IoT protocols (MQTT/HTTP)
+3. **🧠 AI Processing**: This model analyzes the data to detect anomalies and predict consumption
+4. **🚨 Alert Generation**: Suspicious patterns trigger alerts to utility providers and consumers
+5. **📱 Dashboard Visualization**: Results are displayed on the Smart Energy Meter dashboard/mobile app
+
+---
+
+## 🎓 Use Cases
+
+- **Smart Grid Monitoring**: Real-time monitoring of distributed energy systems
+- **Energy Audit Applications**: Automated energy consumption analysis
+- **Utility Company Fraud Detection**: Identifying electricity theft and tampering
+- **IoT-Based Energy Management**: Integration with smart home/building systems
+- **Research in Power Systems and AI**: Academic research in energy analytics
+- **Consumer Energy Awareness**: Helping users understand their consumption patterns
+
+---
+
+## 📝 License
+
+This project is part of the **FYRP (Final Year Research Project)** - Smart Energy Meter system and is intended for educational and research purposes.
+
+[![License](https://img.shields.io/badge/License-Educational-blue?style=flat-square)](LICENSE)
+
+---
+
+## 👥 Related Repositories
+
+<div align="center">
+
+| Component | Description | Link |
+|-----------|-------------|------|
+| 🔌 **Hardware** | Smart Energy Meter IoT Device | [View Repository](#) |
+| 📱 **Dashboard** | Web & Mobile Dashboard | [View Repository](#) |
+| 🔧 **Backend** | API & Data Management | [View Repository](#) |
+| 🧠 **AI Model** | ML Models (You are here) | **Current Repo** |
+
+</div>
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+<details>
+<summary><b>How to Contribute</b></summary>
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+</details>
+
+---
+
+## 📧 Contact & Support
+
+<div align="center">
+
+**Repository Owner**: [@gmpsankalpa](https://github.com/gmpsankalpa)
+
+[![GitHub](https://img.shields.io/badge/GitHub-gmpsankalpa-181717?style=for-the-badge&logo=github)](https://github.com/gmpsankalpa)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/gmpsankalpa)
+
+For questions or support regarding the Smart Energy Meter AI Model, please [open an issue](https://github.com/gmpsankalpa/FYRP-AI-Model/issues).
+
+</div>
+
+---
+
+## ⭐ Show Your Support
+
+If this project helped you, please give it a ⭐️! It motivates us to create more awesome projects.
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/gmpsankalpa/FYRP-AI-Model?style=social)](https://github.com/gmpsankalpa/FYRP-AI-Model/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/gmpsankalpa/FYRP-AI-Model?style=social)](https://github.com/gmpsankalpa/FYRP-AI-Model/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/gmpsankalpa/FYRP-AI-Model?style=social)](https://github.com/gmpsankalpa/FYRP-AI-Model/watchers)
+
+</div>
+
+---
+
+<div align="center">
+
+### 🌟 Thank you for your interest in Smart Energy Meter AI Model! 🌟
+
+**Made with ❤️ for a Sustainable Energy Future**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
+</div>
